@@ -1,0 +1,53 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    
+
+<nav class="navbar">
+    <div class="logo">Kerem Alanoglu</div>
+    <ul class="nav-links">
+        <li><a href="{{ url_for('main_page') }}">Home</a></li>
+        <li><a href="{{ url_for('projects') }}">Projects</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    </ul>
+</nav>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arka Plan Video</title>
+  
+</head>
+
+<div class="project-gallery">
+    <div class="project" id="project1">
+        <img class="carimg" src="{{ url_for('static', filename='cargame.png') }}" alt="cargame">
+        <div class="project-overlay">
+            <h3>Project 1</h3>
+            <p>Details of the project</p>
+            <a href="http://127.0.0.1:5000/firstproject" class="project1">Details</a>
+        </div>
+    </div>
+
+    <div class="project" id="project2">
+        <img class="cproject" src="{{ url_for('static', filename='c++project.png') }}" alt="cproject">
+        <div class="project-overlay">
+            <h3>Project 2</h3>
+            <p>Details of the project</p>
+            <a href="http://127.0.0.1:5000/secondproject" class="project2">Details</a>
+        </div>
+    </div>
+    <div class="project" id="project1">
+        <img class="aiproject" src="{{ url_for('static', filename='aiproject.png') }}" alt="aiproject">
+        <div class="project-overlay">
+            <h3>Project 3</h3>
+            <p>Details of the project</p>
+          
+            <a href="http://127.0.0.1:5000/thirdproject" class="project3">Details</a>
+        </div>
+    
+</div>
+
+<div class="project-buttons"></div>
+    
+</div>

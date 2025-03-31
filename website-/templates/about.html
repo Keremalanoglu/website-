@@ -1,0 +1,34 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    
+
+<nav class="navbar">
+    <div class="logo">Kerem Alanoglu</div>
+    <ul class="nav-links">
+        <li><a href="{{ url_for('main_page') }}">Home</a></li>
+        <li><a href="{{ url_for('projects') }}">Projects</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    </ul>
+</nav>
+
+
+
+<div class="about-section">
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='resim.png') }}" alt="kerem">
+    </div>
+    <div class="about-content">
+        <h2>About Me</h2>
+        <p>Hello, I'm Kerem, a passionate computer science student. I specialize in front-end and back-end development, and I'm always excited to learn new technologies and create new projects.</p>
+        <p>I’ve worked on few projects so far but i am working on more advance projects at the moment. My goal is to get better at coding and improve myself.</p>
+        <a href="http://127.0.0.1:5000/projects" class="btn">View My Projects</a>
+    </div>  
+</div>
+
+
+
+
+
+
+

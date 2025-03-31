@@ -1,0 +1,327 @@
+/* Genel Ayarlar */
+body {
+    background-color: #121212;    /* i have to change the color of the background at the end */
+    color: white;
+    font-family: 'Courier', monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #1c1c1c;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0px;
+    
+    z-index: 1000;
+    
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    padding-right: 120px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: green;
+}
+
+/* Profil Alanı */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.profile-content h1 {
+    font-size: 32px;
+    color: greenyellow;
+}
+
+.profile-content h2 {
+    font-size: 24px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    
+}
+
+
+
+/* Profil Resmi */
+.myself {
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 20px;
+}
+
+/* Butonlar */
+.buttons-container {
+    display: flex;
+    gap: 15px;
+}
+
+.linkedin-button, .github-button, .cv-button {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+.linkedin-button:hover {
+    background-color: #0077b5;
+    color: white;
+}
+
+.github-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.cv-button:hover {
+    background-color: purple;
+    color: black;
+}
+
+/* Mobil Uyum */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+        
+    }
+
+    .profile-content h1 {
+        font-size: 24px;
+    }
+
+    .profile-content h2 {
+        font-size: 18px;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+    }
+
+    .myself {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Proje galerisinin içinde projeleri yatayda yerleştirebilmek için flexbox */
+.project-gallery {
+    display: flex;           /* Projeleri yan yana hizalar */
+    flex-wrap: wrap;
+    margin-top: 93px;
+}
+
+/* Her bir projenin kutusu */
+.project {
+    position: relative;     /* Overlay'i doğru yerleştirebilmek için */
+    width: 45%;             /* Proje genişliği %45, böylece iki proje yan yana sığar */
+    max-width: 500px;       /* Maksimum genişliği belirleyin */
+    overflow: hidden;       /* Resmin taşmaması için */
+}
+
+/* Proje resminin boyutunu ayarla */
+.carimg, .cproject {
+    width: 80%;            /* Resmin genişliği konteynerin %100'ü kadar */
+    height: auto;           /* Yüksekliği orantılı olarak ayarla */
+}
+
+/* .project-overlay kısmı */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Yarı saydam siyah arka plan */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.project:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Başlık ve buton */
+.project-overlay h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+
+.about-content {
+    margin-top: 99px;
+}
+
+
+.about-section{
+    margin-top: 99px;
+    
+}
+
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px 0;
+}
+
+.about-image img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    width: 90%;            /* Resmin genişliği konteynerin %100'ü kadar */
+    height: auto; 
+    padding-top: 100px  ;
+    padding-bottom: 100px;
+}
+
+.about-content {
+    padding-bottom: 200px;
+}
+
+
+
+.about-content h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.about-content .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border-radius: 60px;
+    
+}
+
+.about-content .btn:hover {
+    background-color: #45a049;
+
+}
+
+.project1, .project2, .project3{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50px;
+    font-family:serif
+    
+}
+
+.project1:hover {
+    background-color: #45a049;
+    
+}
+.project2:hover { 
+    background-color: #45a049;
+    
+}
+
+.project3:hover {
+    background-color: #45a049;
+    
+}
+
+ 
+
+.video-container video {
+    width: 400px;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+.code-container {
+    display: none;                    
+}
+
+
+/* Video tam ekran olsun */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit:contain; /* Video boyutunu ekrana göre ayarla */
+    z-index: -1; /* İçeriklerin ön planda kalmasını sağlar */
+}
+
+/* Sayfa içeriği */
+.content {
+    position: relative;
+    z-index: 1; /* Videonun üstüne gelmesi için */
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20vh;
+    font-family: Arial, sans-serif;
+}
